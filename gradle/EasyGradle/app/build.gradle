@@ -1,0 +1,126 @@
+import com.android.build.api.transform.Format
+import com.android.build.api.transform.QualifiedContent
+import com.android.build.api.transform.Transform
+import com.android.build.api.transform.TransformException
+import com.android.build.api.transform.TransformInput
+import com.android.build.api.transform.TransformInvocation
+import com.android.build.gradle.internal.pipeline.TransformManager
+import com.android.utils.FileUtils
+import com.google.common.collect.Sets
+
+apply plugin: 'com.android.application'
+apply plugin: 'myplugin'
+
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "com.zy.easygradle"
+        minSdkVersion 19
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
+
+    flavorDimensions "size", "color"
+
+    productFlavors {
+        big {
+            dimension "size"
+        }
+        small {
+            dimension "size"
+        }
+        blue {
+            dimension "color"
+        }
+        red {
+            dimension "color"
+        }
+    }
+}
+
+dependencies {
+//    implementation gradleApi()
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+//    implementation 'com.android.tools.build:gradle:3.0.1'
+    implementation project(':module1')
+}
+
+
+gradle.addBuildListener(new BuildListener() {
+    @Override
+    void buildStarted(Gradle gradle) {
+        println('构建开始')
+    }
+
+    @Override
+    void settingsEvaluated(Settings settings) {
+        println('settings 文件解析完成')
+    }
+
+    @Override
+    void projectsLoaded(Gradle gradle) {
+        println('项目加载完成')
+    }
+
+    @Override
+    void projectsEvaluated(Gradle gradle) {
+        println('项目解析完成')
+    }
+
+    @Override
+    void buildFinished(BuildResult result) {
+        println('构建完成')
+    }
+})
+
+gradle.addProjectEvaluationListener(new ProjectEvaluationListener() {
+    @Override
+    void beforeEvaluate(Project project) {
+        println("${project.name} 项目配置之前调用")
+    }
+
+    @Override
+    void afterEvaluate(Project project, ProjectState state) {
+        println("${project.name} 项目配置之后调用")
+    }
+})
+
+gradle.taskGraph.whenReady {
+    println("task 图构建完成")
+}
+gradle.taskGraph.beforeTask {
+    println("task 执行完成")
+}
+gradle.taskGraph.afterTask {
+    println("task 执行完成")
+}
+
+task task1 {
+    doLast {
+        println('task2')
+    }
+}
+
+task task2 {
+    doLast {
+        println('task2')
+    }
+}
+task1.finalizedBy(task2)
+//task1.dependsOn(task2)
+//task1.mustRunAfter(task2)
+//task1.shouldRunAfter(task2)
+//task1.finalizedBy(task2)
