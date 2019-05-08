@@ -191,7 +191,7 @@ dependencies {
 
 #### 2.5 flavor   
 在介绍下面的流程之前，先明确几个概念，flavor，dimension，variant   
-在 android gradle plugin 3.x 之后，每个 flavor 必须对应一个 dimension，可以理解为 flavor 的分组，然后不同 dimension 里的 flavor 组合成一个 variant  
+在 android gradle plugin 3.x 之后，每个 flavor 必须对应一个 dimension，可以理解为 flavor 的分组，然后不同 dimension 里的 flavor 两两组合形成一个 variant  
 举个例子
 如下配置: 
 ```
@@ -212,8 +212,8 @@ productFlavors {
     }
 }
 ```
-那么生成的 variant 对应的就是 bigBlue，bigRed，smallBlue，smallRed，在这个基础上，再加上 buildTypes，就是 bigBlueDebug，bigRedDebug，smallBlueDebug，smallRedDebug，bigBlueRelease，bigRedRelease，smallBlueRelease，smallRedRelease   
-每个 variant 可以对应的使用 variantImplementation 来引入特定的依赖，比如：bigBlueImplementation，只有在 bigBlue 的时候才会引入
+那么生成的 variant 对应的就是 bigBlue，bigRed，smallBlue，smallRed     
+每个 variant 可以对应的使用 variantImplementation 来引入特定的依赖，比如：bigBlueImplementation，只有在 编译 bigBlue variant的时候才会引入
 
 ### 三、gradle wrapper
 ![gradle3](images/gradle-use/gradle3.png)
@@ -235,14 +235,14 @@ productFlavors {
 ### 五、gradle 生命周期及回调
 ![gradle5](images/gradle-use/gradle5.png)
 
-gradle 构建分为三个阶段
-初始化阶段   
+gradle 构建分为三个阶段    
+**初始化阶段**   
 初始化阶段主要做的事情是有哪些项目需要被构建，然后为对应的项目创建 Project 对象
 
-配置阶段   
+**配置阶段**   
 配置阶段主要做的事情是对上一步创建的项目进行配置，这时候会执行 build.gradle 脚本，并且会生成要执行的 task   
 
-执行阶段   
+**执行阶段**   
 执行阶段主要做的事情就是执行 task，进行主要的构建工作
 
 gradle 在构建过程中，会提供一些列回调接口，方便在不同的阶段做一些事情，主要的接口有下面几个
@@ -580,9 +580,22 @@ uploadArchives {
 运行 ./gradlew uploadArchives 就可以了
 
 #### 8.6 调试插件  
-那么开发插件的时候如何调试呢？
-首先在 as 中新增一个 remote 配置，之后在执行 task 的时候增加下面的参数，在 as 中点击 debug 按钮，就可以调试插件代码了
+那么开发插件的时候如何调试呢？   
+1.首先在 as 中新增一个 remote 配置   
+![debug1](images/gradle-use/gradle-plugin-debug1.png)  
+![debug2](images/gradle-use/gradle-plugin-debug2.png)    
+
+2.之后在执行 task 的时候增加下面的参数
+```
 ./gradlew app:mytask -Dorg.gradle.debug=true
+```
+此时可以看到 gradle 在等待 debug 进程连接   
+![debug3](images/gradle-use/gradle-plugin-debug3.png)    
+
+3.之后在插件代码中打好断点，在 as 中点击 debug 按钮，就可以调试插件代码了 
+![debug4](images/gradle-use/gradle-plugin-debug4.png)    
+
+
 
 ### 九、重点总结
 主要要点如下图：
