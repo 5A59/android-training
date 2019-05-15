@@ -179,7 +179,7 @@ productFlavors {
 createAndroidTasks 的调用时机和上面不一样，是在 project.afterEvaluate 里调用的，还记得之前文章里说道的 afterEvaluate 回调么？这个时候所有模块配置已经完成了。所以在这个阶段可以获取到对应的 flavor 以及其他配置了。   
 在 BasePlugin.createAndroidTasks 里，是调用 VariantManager.createAndroidTasks 完成工作的。     
 创建 task 的时候，会先通过 populateVariantDataList 生成 flavor 相关的数据结构，然后调用 createTasksForVariantData 创建 flavor 对应的 task。   
-分别看下这两个方法做的事情
+分别看下这两个方法做的事情    
 **1.populateVariantDataList**  
 在方法里，会先根据 flavor 和 dimension 创建对应的组合，存放在 flavorComboList 里，之后调用 createVariantDataForProductFlavors 创建对应的 VariantData。   
 其中重要的几个方法：
