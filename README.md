@@ -6,7 +6,7 @@
 ### 内容大纲
 #### Gradle 篇 -- 从使用到深入理解
 * [Gradle 的基本使用 (已更新)](./gradle/gradle的基本使用.md)
-* Android Gradle Plugin 源码分析
+* [Android Gradle Plugin 源码分析 (已更新)](./gradle/android_gradle_plugin-主要流程分析.md)
 * Android Gradle Plugin 主要 Task 分析
 * Gradle 源码分析
 * Groovy 使用及源码分析
@@ -52,5 +52,5 @@
 [简书](https://www.jianshu.com/u/4cf10cf65326)   
 
 ### 更新时间：   
-【Android 修炼手册】系列内容 每周五 早八点二十九分 准时更新   
+【Android 修炼手册】系列内容 每周更新   
 其他内容不定时更新   

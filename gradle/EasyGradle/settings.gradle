@@ -1,1 +1,1 @@
-include ':app', ':gradle-plugin', ':module1', ':module2'
+include ':app', ':gradle-plugin', ':module1', ':module2', ':android-gradle-plugin-source'
