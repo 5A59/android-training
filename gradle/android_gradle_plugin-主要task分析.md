@@ -1,4 +1,4 @@
-### android gradle plugin 主要 task 分析
+### 【Android 修炼手册】Gradle 篇 -- Android Gradle Plugin 主要 Task 分析
 ### 上文回顾
 上篇文章里讲了 android gradle plugin 的整体流程，引入插件以后生成了很多 Task，这篇文章就谈谈生成的这些 Task 都有什么用处，以及一些主要 Task 的实现
 
