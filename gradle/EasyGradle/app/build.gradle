@@ -21,6 +21,22 @@ android {
         targetCompatibility 1.8
     }
 
+//    splits {
+//
+//        // Configures multiple APKs based on screen density.
+//        density {
+//
+//            // Configures multiple APKs based on screen density.
+//            enable true
+//
+//            // Specifies a list of screen densities Gradle should not create multiple APKs for.
+//            exclude "ldpi", "xxhdpi", "xxxhdpi"
+//
+//            // Specifies a list of compatible screen size settings for the manifest.
+//            compatibleScreens 'small', 'normal', 'large', 'xlarge'
+//        }
+//    }
+
     flavorDimensions "size", "color"
 
     productFlavors {
