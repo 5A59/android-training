@@ -660,3 +660,7 @@ DexMergerTransform.transform -> DexMergerTransform.handleLegacyAndMonoDex -> Dex
 // d8
 DexMergerTransform.transform -> DexMergerTransform.handleLegacyAndMonoDex -> DexMergerTransformCallable.call -> D8DexArchiveMerger.mergeDexArchives -> 调用 D8 命令
 ```
+
+### 五、本文重点
+1. Android Gradle Plugin 中各个 Task 的作用及实现类，具体可参考文中第二节「Task 对应实现类」
+2. 如何阅读 Task 的代码
