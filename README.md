@@ -8,7 +8,7 @@
 * [Gradle 的基本使用 (已更新)](./gradle/gradle的基本使用.md)
 * [Android Gradle Plugin 源码分析 (已更新)](./gradle/android_gradle_plugin-主要流程分析.md)
 * [Android Gradle Plugin 主要 Task 分析 (已更新)](./gradle/android_gradle_plugin-主要task分析.md)
-* Gradle 源码分析
+* [Gradle 源码分析 (已更新)](./gradle/gradle源码分析.md)
 * Groovy 使用及源码分析
 #### 常用技术篇 -- 开发进阶必备
 * 插件化
