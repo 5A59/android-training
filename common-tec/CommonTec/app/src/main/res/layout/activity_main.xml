@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="activity" />
+
+        <TextView
+            android:id="@+id/loadInterfaceText"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@android:color/darker_gray"
+            android:gravity="center"
+            android:text="load plugin activity by interface"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/loadReflectText"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/darker_gray"
+            android:gravity="center"
+            android:text="load plugin activity by reflect"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/loadHookText"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/darker_gray"
+            android:gravity="center"
+            android:text="load plugin activity by hook"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="service" />
+
+        <TextView
+            android:id="@+id/loadServiceText"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/darker_gray"
+            android:gravity="center"
+            android:text="load plugin service"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="broadcast" />
+
+        <TextView
+            android:id="@+id/registerBroadcastText"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/darker_gray"
+            android:gravity="center"
+            android:text="register plugin broadcast"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/unregisterBroadcastText"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/darker_gray"
+            android:gravity="center"
+            android:text="unregister plugin broadcast"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/sendBroadcastText"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/darker_gray"
+            android:gravity="center"
+            android:text="send broadcast"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="content provider" />
+
+        <TextView
+            android:id="@+id/queryContentProviderText"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/darker_gray"
+            android:gravity="center"
+            android:text="query content provider"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/queryContentProvider2Text"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/darker_gray"
+            android:gravity="center"
+            android:text="query content provider2"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+</ScrollView>
