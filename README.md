@@ -5,14 +5,14 @@
 
 ### 内容大纲
 #### Gradle 篇 -- 从使用到深入理解
-* [Gradle 的基本使用 (已更新)](./gradle/gradle的基本使用.md)
-* [Android Gradle Plugin 源码分析 (已更新)](./gradle/android_gradle_plugin-主要流程分析.md)
-* [Android Gradle Plugin 主要 Task 分析 (已更新)](./gradle/android_gradle_plugin-主要task分析.md)
-* [Gradle 源码分析 (已更新)](./gradle/gradle源码分析.md)
+* [Gradle 的基本使用](./gradle/gradle的基本使用.md)
+* [Android Gradle Plugin 源码分析](./gradle/android_gradle_plugin-主要流程分析.md)
+* [Android Gradle Plugin 主要 Task 分析](./gradle/android_gradle_plugin-主要task分析.md)
+* [Gradle 源码分析](./gradle/gradle源码分析.md)
 * [动画讲解 Gradle 原理](./gradle-summary.md)
 * Groovy 使用及源码分析
 #### 常用技术篇 -- 开发进阶必备
-* 插件化
+* [插件化](./common-tec/android-插件化.md)
 * 热修复
 * 组件化
 * 自定义控件
