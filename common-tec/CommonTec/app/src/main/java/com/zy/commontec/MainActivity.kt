@@ -19,8 +19,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var pluginClassLoader: DexClassLoader
     private lateinit var pluginPath: String
     private lateinit var activityName: String
-    private lateinit var nativeLibDir: String
-    private lateinit var dexOutPath: String
+    private lateinit var nativeLibDir: File
+    private lateinit var dexOutPath: File
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -79,9 +79,12 @@ class MainActivity : AppCompatActivity() {
         extractPlugin()
         pluginPath = File(filesDir.absolutePath, "plugin.apk").absolutePath
         activityName = "com.zy.plugin.PluginActivity"
-        nativeLibDir = File(filesDir, "pluginlib").absolutePath
-        dexOutPath = File(filesDir, "dexout").absolutePath
-        pluginClassLoader = DexClassLoader(pluginPath, dexOutPath, nativeLibDir, this::class.java.classLoader)
+        nativeLibDir = File(filesDir, "pluginlib")
+        dexOutPath = File(filesDir, "dexout")
+        if (!dexOutPath.exists()) {
+            dexOutPath.mkdirs()
+        }
+        pluginClassLoader = DexClassLoader(pluginPath, dexOutPath.absolutePath, nativeLibDir.absolutePath, this::class.java.classLoader)
         PluginUtils.classLoader = pluginClassLoader
         AppInstrumentation.inject(this, PluginContext(pluginPath, this, application, pluginClassLoader))
     }
