@@ -22,6 +22,7 @@
 * Git 使用
 * Git 原理浅析
 #### 常用开源库篇 -- 从使用到深入理解
+* [Shadow 插件化框架分析](./common-tec/shadow框架分析.md)
 * Retrofit
 * RxJava
 * EventBus
