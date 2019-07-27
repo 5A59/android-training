@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="native hook" />
+
+        <TextView
+            android:id="@+id/nativeHookText"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/darker_gray"
+            android:gravity="center"
+            android:text="native hook"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/showNativeHookMsgText"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/darker_gray"
+            android:gravity="center"
+            android:text="show native hook msg"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="insert dex" />
+
+        <TextView
+            android:id="@+id/insertDexText"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/darker_gray"
+            android:gravity="center"
+            android:text="insert dex"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/startPatchActivityText"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/darker_gray"
+            android:gravity="center"
+            android:text="start patch activity"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="instant run" />
+
+        <TextView
+            android:id="@+id/instantRunText"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/darker_gray"
+            android:gravity="center"
+            android:text="install"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/uninstallInstantRunText"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/darker_gray"
+            android:gravity="center"
+            android:text="uninstall"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/showInstantRunMsgText"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/darker_gray"
+            android:gravity="center"
+            android:text="show instant run msg"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+</ScrollView>
