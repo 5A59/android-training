@@ -91,10 +91,10 @@ AppClassLoader
 #### 4.2 android 中的 ClassLoader
 在这里，我们统称 dex 文件，包含 dex 的 apk 文件以及 jar 文件为 dex 文件
 PathClassLoader
-用来加载系统类和应用程序类，可以加载已经安装的 apk 目录下的 dex 文件
+用来加载系统类和应用程序类，用来加载 dex 文件，但是 dex2oat 生成的 odex 文件只能放在系统的默认目录。
 
 DexClassLoader
-用来加载 dex 文件，可以从存储空间加载 dex 文件。
+用来加载 dex 文件，可以从存储空间加载 dex 文件，可以指定 odex 文件的存放目录。
 
 我们在插件化中一般使用的是 DexClassLoader。
 

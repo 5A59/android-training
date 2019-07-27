@@ -13,7 +13,7 @@
 * Groovy 使用及源码分析
 #### 常用技术篇 -- 开发进阶必备
 * [插件化](./common-tec/android-插件化.md)
-* 热修复
+* [热修复](./common-tec/android-热修复.md)
 * 组件化
 * 自定义控件
 * App 架构模式（MVC / MVP / MVVM）

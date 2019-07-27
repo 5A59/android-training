@@ -1,0 +1,62 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion "29.0.1"
+
+    defaultConfig {
+        applicationId "com.zy.hotfix"
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        externalNativeBuild {
+            ndk {
+                abiFilters 'armeabi', 'x86'
+            }
+            cmake {
+                // Use the following syntax when passing arguments to variables:
+                // arguments "-DVAR_NAME=ARGUMENT".
+                //api level 19的so不能使用libc++编译，需要使用libstdc++
+                arguments "-DANDROID_ARM_NEON=TRUE",
+                        // If you're passing multiple arguments to a variable, pass them together:
+                        // arguments "-DVAR_NAME=ARG_1 ARG_2"
+                        // The following line passes 'rtti' and 'exceptions' to 'ANDROID_CPP_FEATURES'.
+                        "-DANDROID_STL=c++_shared"
+                cppFlags "-std=gnu++11"
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    externalNativeBuild {
+        cmake {
+            path "CMakeLists.txt"
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+}
+
+project.afterEvaluate {
+    project.tasks.each {
+        if (it.name == 'mergeDebugAssets') {
+            it.dependsOn ':patch:assembleDebug'
+        }
+    }
+}
