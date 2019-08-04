@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MyView">
+        <attr name="message" format="string" />
+    </declare-styleable>
+    <declare-styleable name="VolumeBar">
+        <attr name="count" format="integer" />
+        <attr name="col_color" format="color" />
+        <attr name="tip" format="string" />
+    </declare-styleable>
+</resources>

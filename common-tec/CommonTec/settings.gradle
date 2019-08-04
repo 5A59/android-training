@@ -1,1 +1,1 @@
-include ':app', ':plugin', ':hotfix', ':patch'
+include ':app', ':plugin', ':hotfix', ':patch', ':myview'

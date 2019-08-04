@@ -15,8 +15,11 @@
 * [插件化](./common-tec/android-插件化.md)
 * [热修复](./common-tec/android-热修复.md)
 * 组件化
-* 自定义控件
+* [自定义控件](./common-tec/android-自定义View.md)
+* IPC
+* Android 打包
 * App 架构模式（MVC / MVP / MVVM）
+* 设计模式
 * kotlin / Jetpack
 #### Git 篇 -- 从使用到深入理解
 * Git 使用

@@ -1,7 +1,6 @@
 apply plugin: 'com.android.application'
-
-apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-android'
 
 android {
     compileSdkVersion 28
@@ -9,11 +8,14 @@ android {
 
 
     defaultConfig {
-        applicationId "com.zy.patch"
+        applicationId "com.zy.myview"
         minSdkVersion 19
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
     }
 
     buildTypes {
@@ -29,23 +31,7 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     implementation 'com.android.support:appcompat-v7:28.0.0'
-    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-}
-
-
-project.afterEvaluate {
-    project.tasks.each {
-        if (it.name == "assembleDebug") {
-            it.doLast {
-                copy {
-                    from new File(project.getBuildDir(), 'outputs/apk/debug/patch-debug.apk').absolutePath
-                    into new File(project.getRootProject().getProjectDir(), 'hotfix/src/main/assets')
-                    rename 'patch-debug.apk', 'patch.apk'
-                }
-            }
-        }
-    }
 }
 repositories {
     mavenCentral()
