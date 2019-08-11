@@ -60,3 +60,5 @@ project.afterEvaluate {
         }
     }
 }
+
+println "projectProperties: " + project.gradle.startParameter.projectProperties

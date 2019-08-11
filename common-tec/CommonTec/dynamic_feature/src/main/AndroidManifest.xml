@@ -1,0 +1,11 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:dist="http://schemas.android.com/apk/distribution"
+          package="com.zy.dynamic_feature">
+    <dist:module
+            dist:onDemand="true"
+            dist:instant="false"
+            dist:title="@string/title_dynamic_feature">
+        <dist:fusing dist:include="true"/>
+    </dist:module>
+</manifest>
+
