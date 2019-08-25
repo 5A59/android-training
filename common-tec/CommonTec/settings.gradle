@@ -1,1 +1,1 @@
-include ':app', ':plugin', ':hotfix', ':patch', ':myview', ':simpleapk', ':dynamic_feature'
+include ':app', ':plugin', ':hotfix', ':patch', ':myview', ':simpleapk', ':dynamic_feature', ':designpattern'
