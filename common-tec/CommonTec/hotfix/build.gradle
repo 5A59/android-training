@@ -16,7 +16,7 @@ android {
         versionName "1.0"
         externalNativeBuild {
             ndk {
-                abiFilters 'armeabi', 'x86'
+                abiFilters 'armeabi-v7a', 'x86'
             }
             cmake {
                 // Use the following syntax when passing arguments to variables:
