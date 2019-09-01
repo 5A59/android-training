@@ -16,8 +16,7 @@
 * [热修复](./common-tec/android-热修复.md)
 * 组件化
 * [自定义控件](./common-tec/android-自定义View.md)
-* IPC
-* Android 打包
+* [Android 打包](./common-tec/android-打包.md)
 * App 架构模式（MVC / MVP / MVVM）
 * 设计模式
 * kotlin / Jetpack
@@ -33,8 +32,7 @@
 * butterknife
 * leakcanary
 #### 系统源码篇 -- Android 开发的根基
-* Android 中的 ClassLoader 分析
-* Activity 启动流程
+* [Android 中的 ClassLoader 分析](./common-tec/android中的classloader.md)
 * Binder 原理分析
 * ...
 #### ART / JVM 篇 -- 加深根基
