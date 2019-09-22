@@ -362,7 +362,7 @@ MVP 架构里，将逻辑，数据，界面的处理划分为三个部分，模�
 我们可以看到，MVP 中的各个角色划分，和 MVC 基本上相似，那么区别在哪里呢？区别就在角色的通信上。    
 
 MVP 和 MVC 最大的不同，就是 View 和 Model 不相互持有，都通过 Presenter 做中转。View 产生**事件**，通知给 Presenter，Presenter 中进行*逻辑处理*后，通知 Model *更新数据*，Model 更新数据后，通知**数据结构**给 Presenter，Presenter 再通知 View 更新界面。     
-`
+
 这就是一个完整 MVP 的数据流向。   
 
 #### 6.2 在 Android 中的实现
