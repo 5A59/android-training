@@ -10,12 +10,7 @@ import android.text.TextUtils
 
 class HandleModel : IModel {
     private var view: IView? = null
-    private var controller: IController? = null
     private val handler: Handler = Handler(Looper.getMainLooper())
-
-    override fun setController(controller: IController) {
-        this.controller = controller
-    }
 
     override fun setView(view: IView) {
         this.view = view
@@ -41,7 +36,6 @@ class HandleModel : IModel {
 
 interface IModel {
     fun setView(view: IView)
-    fun setController(controller: IController)
     fun handleData(data: String)
     fun clearData()
 }

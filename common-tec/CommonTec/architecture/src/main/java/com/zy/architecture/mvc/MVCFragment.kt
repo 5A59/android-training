@@ -15,7 +15,7 @@ import kotlinx.android.synthetic.main.architecture.*
  * Created by zhangyi on 2019-09-14
  */
 
-class MVCFragment : Fragment(), IController, IView {
+class MVCFragment : Fragment(), IView {
 
     companion object {
         fun newInstance(): Fragment {
@@ -24,7 +24,7 @@ class MVCFragment : Fragment(), IController, IView {
     }
 
     private val model: IModel = HandleModel()
-    private var controller: IController? = null
+    private var controller: IController = HandleController()
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.architecture, container, false)
@@ -32,7 +32,7 @@ class MVCFragment : Fragment(), IController, IView {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        setController(this)
+        setController(controller)
         model.setView(this)
 
         titleText.text = "MVC"
@@ -52,10 +52,6 @@ class MVCFragment : Fragment(), IController, IView {
         }
     }
 
-    override fun onDataChanged(data: String) {
-        model.handleData(data)
-    }
-
     override fun onDataHandled(data: String) {
         if (TextUtils.isEmpty(data)) {
             edit.setText("")
@@ -67,13 +63,6 @@ class MVCFragment : Fragment(), IController, IView {
 
     override fun dataHanding() {
         msgText.text = "handle data ..."
-    }
-
-    override fun clearData() {
-        model.clearData()
-    }
-
-    override fun setModel(model: IModel) {
     }
 
     override fun setController(controller: IController) {

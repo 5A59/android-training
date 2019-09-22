@@ -17,7 +17,7 @@
 * 组件化
 * [自定义控件](./common-tec/android-自定义View.md)
 * [Android 打包](./common-tec/android-打包.md)
-* App 架构模式（MVC / MVP / MVVM）
+* [App 架构模式（MVC / MVP / MVVM）](./common-tec/android架构模式.md)
 * 设计模式
 * kotlin / Jetpack
 #### Git 篇 -- 从使用到深入理解

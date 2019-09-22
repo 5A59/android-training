@@ -6,7 +6,6 @@ android {
     compileSdkVersion 28
     buildToolsVersion "29.0.1"
 
-
     defaultConfig {
         applicationId "com.zy.architecture"
         minSdkVersion 19
@@ -24,6 +23,9 @@ android {
         }
     }
 
+    dataBinding {
+        enabled true
+    }
 }
 
 dependencies {
