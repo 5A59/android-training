@@ -337,7 +337,7 @@ class MVCFragment : Fragment(), IView {
 ```
 这样我们就实现了一个简单的 MVC 结构。
 
-#### 5.3 MVC 架构的优缺点
+#### 5.3 MVC 架构模式的优缺点
 优点：   
 1. 结构清晰，职责划分清晰   
 2. 降低耦合   
@@ -535,7 +535,7 @@ class Presenter : IPresenter {
 }
 ```
 
-#### 6.3 架构模式的优缺点
+#### 6.3 MVP 架构模式的优缺点
 优点：   
 1. 结构清晰，职责划分清晰    
 2. 模块间充分解耦    
@@ -755,7 +755,7 @@ class MVVMFragment : Fragment() {
 通过上面的实现，当 EditText 中文字变化后，会自动修改 inputText 的值，触发 inputText 监听器，此时 ViewModel 将消息传递给 Model 进行处理，Model 数据处理完成后，通知 ViewModel 更新 handledText 的值，自动更新到界面上。     
 点击清空按钮时，自动调用绑定的点击函数，通知 ViewModel 清空事件，ViewModel 将消息传递给 Model 进行数据清空，Model 数据处理完成后，通知 ViewModel 进行界面更新。   
 
-#### 7.3 架构模式的优缺点
+#### 7.3 MVVM 架构模式的优缺点
 优点：
 1. 结构清晰，职责划分清晰   
 2. 模块间充分解耦   
