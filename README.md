@@ -10,11 +10,9 @@
 * [Android Gradle Plugin 主要 Task 分析](./gradle/android_gradle_plugin-主要task分析.md)
 * [Gradle 源码分析](./gradle/gradle源码分析.md)
 * [动画讲解 Gradle 原理](./gradle-summary.md)
-* Groovy 使用及源码分析
 #### 常用技术篇 -- 开发进阶必备
 * [插件化](./common-tec/android-插件化.md)
 * [热修复](./common-tec/android-热修复.md)
-* 组件化
 * [自定义控件](./common-tec/android-自定义View.md)
 * [Android 打包](./common-tec/android-打包.md)
 * [App 架构模式（MVC / MVP / MVVM）](./common-tec/android架构模式.md)
@@ -34,7 +32,6 @@
 #### 系统源码篇 -- Android 开发的根基
 * [Android 中的 ClassLoader 分析](./common-tec/android中的classloader.md)
 * Binder 原理分析
-* ...
 #### ART / JVM 篇 -- 加深根基
 * [Java 反射为什么慢](./jvm-art/java反射为什么慢.md)
 * 类加载原理分析
@@ -56,5 +53,4 @@
 [简书](https://www.jianshu.com/u/4cf10cf65326)   
 
 ### 更新时间：   
-【Android 修炼手册】系列内容 每周更新   
-其他内容不定时更新   
+【Android 修炼手册】系列内容不定时更新中   
